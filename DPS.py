@@ -606,9 +606,9 @@ def predict():
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
+
 if __name__ == '__main__':
-    print("Starting Flask app on http://localhost:5000")
-    print("Access the app in your browser at: http://localhost:5000 (ALWAYS starts at Login)")
-    print("Login with any username and password '1234'")
-    webbrowser.open('http://localhost:5000')
-    app.run(host='127.0.0.1', port=5000, debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
+
