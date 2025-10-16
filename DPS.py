@@ -536,6 +536,9 @@ PREDICTION_TEMPLATE = """
         // Init
         initChart();
     </script>
+    <footer style="position: absolute; bottom: 10px; width: 100%; text-align: center; color: white; font-weight: bold;">
+    © 2025 By Wana Abel
+</footer>
 </body>
 </html>
 """
@@ -611,4 +614,5 @@ if __name__ == '__main__':
     import os
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+
 
